@@ -55,8 +55,29 @@ support-ai/
     docker-compose up --build
     ```
 4.  **Access the App**
-    - Frontend: `http://localhost:80`
+    - Frontend: `http://localhost:8000`
     - API Docs: `http://localhost:8000/docs`
+
+## 🚀 Deployment
+
+### Option 1: Render (Recommended)
+This project is configured for [Render](https://render.com/).
+
+1.  Fork/Push this repository to GitHub.
+2.  Sign up/Log in to Render.
+3.  Click **New +** and select **Blueprint**.
+4.  Connect your GitHub account and select this repository.
+5.  Render will auto-detect `render.yaml`.
+6.  Click **Apply**.
+7.  **Important**: Go to the **Environment** tab of your new service and add your `GEMINI_API_KEY`.
+
+### Option 2: Docker (Any VPS)
+You can deploy this container to any server with Docker installed.
+
+```bash
+docker build -t support-ai .
+docker run -d -p 80:8000 -e GEMINI_API_KEY=your_key_here support-ai
+```
 
 ## 🧠 Agent Architecture
 
