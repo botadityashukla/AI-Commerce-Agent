@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Support Agent</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Support AI</h2>
+            </div>
+
+            <div class="status-panel">
+                <h3>System Status</h3>
+                <div class="status-item">
+                    <span class="status-indicator active" id="api-status-dot"></span>
+                    <span id="api-status-text">Checking...</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-indicator active" id="db-status-dot"></span>
+                    <span id="db-status-text">Vector DB</span>
+                </div>
+            </div>
+
+            <div class="ticket-panel">
+                <h3>Active Tickets</h3>
+                <div id="ticket-list" class="ticket-list">
+                    <!-- Tickets will appear here -->
+                    <div class="empty-state">No active tickets</div>
+                </div>
+            </div>
+
+            <div class="debug-panel">
+                <h3>Last Agent</h3>
+                <div id="last-agent" class="agent-badge">None</div>
+            </div>
+        </aside>
+
+        <!-- Chat Area -->
+        <main class="chat-container">
+            <div class="chat-header">
+                <h1>Customer Support</h1>
+                <p>Ask about refunds, shipping, or account issues.</p>
+            </div>
+
+            <div id="chat-history" class="chat-history">
+                <div class="message ai">
+                    <div class="bubble">
+                        Hello! How can I help you today?
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+                <button id="send-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </main>
+    </div>
+    <script src="static/app.js"></script>
+</body>
+
+</html>

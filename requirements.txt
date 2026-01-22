@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+langchain
+langgraph
+langchain-google-genai
+langchain-community
+sentence-transformers
+faiss-cpu
+pydantic-settings
+isort
+pytest
+black

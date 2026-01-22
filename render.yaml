@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: support-ai
+    env: docker
+    plan: free
+    region: oregon 
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    autoDeploy: true
